@@ -1,5 +1,5 @@
 const request = require('request');
-const config = require('../config.js');
+// const config = require('../config.js');
 const axios = require('axios');
 
 
@@ -13,8 +13,8 @@ let getReposByUsername = (user, callback) => {
     method: 'get',
     url: `https://api.github.com/users/${user}/repos`,
     headers: {
-      'User-Agent': 'request',
-      'Authorization': `token ${config.TOKEN}`
+      'User-Agent': 'request'
+      // 'Authorization': `token ${config.TOKEN}`
       }
   }).then((repos)=> {
     callback(null, repos)
